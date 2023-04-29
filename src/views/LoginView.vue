@@ -2,6 +2,9 @@
 import '@/assets/scss/auth.scss'
 import AppLogo from '@/components/AppLogo.vue'
 import AuthForm from '@/components/AuthForm.vue'
+import { useTitle } from '@vueuse/core'
+
+useTitle('Авторизация')
 </script>
 
 <template>

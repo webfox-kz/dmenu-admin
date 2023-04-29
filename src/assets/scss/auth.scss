@@ -140,3 +140,28 @@
     margin-top: 0.4rem;
   }
 }
+
+.sent-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 2rem 3rem;
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    font-weight: 100;
+    color: c.$gray-darken;
+  }
+
+  &__icon {
+    text-align: center;
+    .icon {
+      font-size: 5rem;
+    }
+  }
+}

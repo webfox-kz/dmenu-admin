@@ -29,6 +29,7 @@ const { handleSubmit, setFieldError } = useForm({
 })
 
 const submitHandler = handleSubmit(async (values: any) => {
+  isLoading.value = true
   try {
     const response = await api.post<{ user: User; token: string }>(
       '/v1/auth/admin/email/login',
@@ -45,6 +46,8 @@ const submitHandler = handleSubmit(async (values: any) => {
         setFieldError(key, serverErrorMessage(errors[key]))
       })
     }
+  } finally {
+    isLoading.value = false
   }
 })
 </script>
@@ -53,7 +56,7 @@ const submitHandler = handleSubmit(async (values: any) => {
     <auth-input type="email" name="email" label="Электронная почта" />
     <auth-input type="password" name="password" label="Пароль" />
     <div class="login-form__group">
-      <router-link to="/reset-password" class="default__link">Забыли пароль</router-link>
+      <router-link to="/forgot-password" class="default__link">Забыли пароль?</router-link>
     </div>
     <div class="login-form__group login_form__submit">
       <default-submit-button text="Войти" :loading="isLoading" />
