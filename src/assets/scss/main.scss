@@ -1,0 +1,111 @@
+@use 'reset';
+@use 'shared/colors.scss' as c;
+@use 'shared/grid.scss' as g;
+@use 'shared/breakpoints.scss' as bp;
+
+@import 'shared/roboto.scss';
+
+body {
+  background: c.$light;
+  font-family: 'Roboto', sans-serif;
+  color: c.$dark;
+}
+
+.main-logo {
+  fill: c.$dark;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  height: 4px;
+  z-index: 9999;
+  pointer-events: none;
+  width: 50%;
+  background: c.$blue;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: progressBar;
+  animation-timing-function: ease-in-out;
+}
+
+.default {
+  &__submit-button {
+    padding: 0.5rem 1.5rem;
+    appearance: none;
+    border: none;
+    border-radius: 999999px;
+    background: c.$blue;
+    color: c.$white;
+    cursor: pointer;
+    outline: none;
+
+    & .text {
+      font-weight: 700;
+      display: block;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.loading {
+        color: transparent;
+
+        &::before {
+          content: '';
+          position: absolute;
+          height: calc(100% - 2px);
+          aspect-ratio: 1/1;
+          width: auto;
+          border-radius: 999999px;
+          border: 2px solid transparent;
+          border-bottom-color: c.$white;
+          animation: spin 0.5s linear infinite;
+        }
+      }
+    }
+
+    &:hover {
+      background: c.$blue-darken;
+    }
+
+    &:disabled {
+      background: c.$gray-darken;
+      cursor: not-allowed;
+    }
+
+    &.loading {
+      background: c.$gray-darken;
+      cursor: not-allowed;
+    }
+  }
+
+  &__link {
+    color: c.$blue;
+    text-decoration: none;
+    font-size: 1rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes progressBar {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 100%;
+  }
+}

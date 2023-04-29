@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Menu</title>
+    <style>
+      .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #f4f4f4;
+        z-index: 99999999;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        gap: 1.5vw;
+      }
+
+      .preloader .preloader__logo {
+        width: auto;
+        height: 10%;
+      }
+
+      .preloader__logo #logo__square {
+        animation: preloader 1s ease-in-out infinite forwards;
+      }
+
+      @keyframes preloader {
+        0% {
+          transform-box: fill-box;
+          transform-origin: center;
+          transform: rotate(0deg);
+        }
+        100% {
+          transform-box: fill-box;
+          transform-origin: center;
+          transform: rotate(90deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="preloader__square"></div>
+
+      <svg
+        width="389"
+        height="140"
+        viewBox="0 0 389 140"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="preloader__logo"
+      >
+        <g clip-path="url(#clip0_2_44)">
+          <g class="logo__text">
+            <path
+            d="M389.1 75.8333V101.333C389.1 110.75 384.017 117.917 373.017 119.583C371.35 119.833 369.6 120 367.683 120H305.35C303.933 119.917 302.683 119.833 301.433 119.667C290.433 118 285.267 110.833 285.267 101.417V75.8333H298.6V100.917C298.6 105.083 301.35 108.417 306.683 108.417H367.683C370.35 108.417 372.35 107.583 373.683 106.25C375.017 104.917 375.683 103 375.683 100.917V75.8333H389.1Z"
+            fill="#333333"
+          />
+          <path
+            d="M177.517 119.25V93.0833L167.767 119.25H161.933L152.267 93.0833V119.167H139.1V75.8333H157.267L164.85 96.6667L172.517 75.8333H190.6V119.25H177.517Z"
+            fill="#333333"
+          />
+          <path
+            d="M197.683 119.25V75.8333H230.6V87.25H210.85V91.5833H230.1V103H210.85V107.75H230.6V119.167L197.683 119.25Z"
+            fill="#333333"
+          />
+          <path
+            d="M265.6 119.25L249.6 97.25V119.25H236.433V75.8333H250.017L265.1 96.4167V75.8333H278.183V119.25H265.6Z"
+            fill="#333333"
+          />
+          <path
+            d="M139.1 64.0833V20.75H158.517C172.183 20.75 182.35 28.5833 182.35 42.4167C182.35 56.25 172.183 64.0833 158.6 64.0833H139.1ZM168.933 42.4167C168.933 36.5833 165.517 32.1667 158.517 32.1667H152.183V52.6667H158.433C165.1 52.6667 168.933 47.8333 168.933 42.4167Z"
+            fill="#333333"
+          />
+          <path d="M200.183 20.75H187.017V64.1667H200.183V20.75Z" fill="#333333" />
+          <path
+            d="M204.85 42.4167C204.85 28.5 215.6 20 228.683 20C239.017 20 245.017 25.75 247.767 31.3333L236.683 37C235.267 33.8333 232.183 31.75 228.683 31.5833C222.35 31.5833 218.1 36.4167 218.1 42.4167C218.1 48.4167 222.433 53.3333 228.683 53.3333C231.1 53.3333 233.433 52.6667 235.433 51.4167V49.8333H227.433V38.3333H248.6V56.0833C243.6 61.75 236.35 65 228.767 64.8333C215.6 64.9167 204.85 56.3333 204.85 42.4167Z"
+            fill="#333333"
+          />
+          <path d="M267.6 20.75H254.433V64.1667H267.6V20.75Z" fill="#333333" />
+          <path
+            d="M283.85 64.0833V32.1667H272.183V20.75H308.6V32.1667H297.017V64.0833H283.85Z"
+            fill="#333333"
+          />
+          <path
+            d="M342.267 64.0833L340.683 59H325.1L323.517 64.0833H308.6L324.6 20.6667H341.1L357.1 64.0833H342.267ZM332.85 33.5833L328.6 47.5833H337.183L332.85 33.5833Z"
+            fill="#333333"
+          />
+          <path d="M359.517 64.0833V20.75H372.6V52.6667H389.1V64.0833H359.517Z" fill="#333333" />
+          </g>
+          <g id="logo__square">
+            <path d="M118.7 20.75V32.1645L20.2 32.1644L20.2 20.75L118.7 20.75Z" fill="#333333" />
+          <path d="M118.7 119.25H107.286L107.286 20.75L118.7 20.75L118.7 119.25Z" fill="#333333" />
+          <path d="M31.6144 119.25H20.2V20.75L31.6144 20.75L31.6144 119.25Z" fill="#333333" />
+          <path d="M118.7 107.836L118.7 119.25H20.2V107.836L118.7 107.836Z" fill="#333333" />
+          </g>
+        </g>
+        <defs>
+          <clipPath id="clip0_2_44">
+            <rect width="389" height="140" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+    <script>
+      window.addEventListener('load', () => {
+        const preloader = document.querySelector('.preloader')
+        setTimeout(() => {
+          preloader.style.opacity = '0'
+          preloader.style.visibility = 'hidden'
+        }, 500)
+      })
+    </script>
+  </body>
+</html>
