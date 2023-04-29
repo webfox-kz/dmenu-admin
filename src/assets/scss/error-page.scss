@@ -1,0 +1,60 @@
+@use 'shared/colors.scss' as c;
+@use 'shared/grid.scss' as g;
+@use 'shared/breakpoints.scss' as bp;
+
+.error-page {
+  padding: 2rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  &__title {
+    font-weight: 700;
+    text-align: center;
+    font-size: 3rem;
+
+    & .sad {
+      white-space: nowrap;
+    }
+
+    @include bp.screen(md) {
+      font-size: 5rem;
+    }
+
+    @include bp.screen(lg) {
+      font-size: 7rem;
+    }
+
+    @include bp.screen(xxl) {
+      font-size: 10rem;
+    }
+  }
+
+  &__sub {
+    text-align: center;
+    color: c.$gray-darken;
+    font-size: 1.2rem;
+
+    @include bp.screen(md) {
+      font-size: 1.5rem;
+    }
+
+    @include bp.screen(lg) {
+      font-size: 1.8rem;
+    }
+
+    @include bp.screen(xxl) {
+      font-size: 2rem;
+    }
+  }
+
+  &__image {
+    max-width: 400px;
+    width: 90%;
+    height: auto;
+  }
+}

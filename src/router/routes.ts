@@ -29,6 +29,11 @@ const routes: RouteRecordRaw[] = [
     name: 'password-change',
     component: () => import('@/views/PasswordChangeView.vue'),
     beforeEnter: requiresGuest
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    component: () => import('@/views/errors/NotFound.vue'),
+    name: 'not-found'
   }
 ]
 
