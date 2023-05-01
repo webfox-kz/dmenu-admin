@@ -90,13 +90,8 @@ const submitHandler = handleSubmit(async (values: any) => {
         <p v-show="HashError" class="login-form__error">
           {{ HashError }}
         </p>
-        <auth-input value="GgdsauOP089" type="password" name="password" label="Придумайте пароль" />
-        <auth-input
-          value="GgdsauOP089"
-          type="password"
-          name="passwordConfirmation"
-          label="Подтвердите пароль"
-        />
+        <auth-input type="password" name="password" label="Придумайте пароль" />
+        <auth-input type="password" name="passwordConfirmation" label="Подтвердите пароль" />
         <div class="login-form__group login_form__submit">
           <default-submit-button text="Сбросить" :loading="isLoading" />
         </div>

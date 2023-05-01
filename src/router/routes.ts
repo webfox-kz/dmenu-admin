@@ -1,15 +1,23 @@
 import type { RouteRecordRaw } from 'vue-router'
 
-import HomeView from '@/views/HomeView.vue'
+import HomeView from '@/views/dashboard/HomeView.vue'
 import LoginView from '@/views/LoginView.vue'
 import requiresAuth from '@/middleware/requiresAuth'
 import requiresGuest from '@/middleware/requiresGuest'
+
+const guestRoutes = ['login', 'forgot-password', 'password-change']
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'home',
     component: HomeView,
+    beforeEnter: requiresAuth
+  },
+  {
+    path: '/registrations',
+    name: 'registrations',
+    component: () => import('@/views/dashboard/RegistrationsView.vue'),
     beforeEnter: requiresAuth
   },
   {
@@ -38,3 +46,5 @@ const routes: RouteRecordRaw[] = [
 ]
 
 export default routes
+
+export { guestRoutes }

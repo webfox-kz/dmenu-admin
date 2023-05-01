@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
+
 import useGlobalStore from './stores/modules/global.store'
 
 const globalStore = useGlobalStore()
